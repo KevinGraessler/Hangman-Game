@@ -19,8 +19,21 @@ class Program
     {
         while (true)
         {
-            Console.WriteLine("### HANGMAN ###");
-            Console.WriteLine("###############");
+            Console.WriteLine(@"
+
+ ██░ ██  ▄▄▄       ███▄    █   ▄████  ███▄ ▄███▓ ▄▄▄       ███▄    █ 
+▓██░ ██▒▒████▄     ██ ▀█   █  ██▒ ▀█▒▓██▒▀█▀ ██▒▒████▄     ██ ▀█   █ 
+▒██▀▀██░▒██  ▀█▄  ▓██  ▀█ ██▒▒██░▄▄▄░▓██    ▓██░▒██  ▀█▄  ▓██  ▀█ ██▒
+░▓█ ░██ ░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█  ██▓▒██    ▒██ ░██▄▄▄▄██ ▓██▒  ▐▌██▒
+░▓█▒░██▓ ▓█   ▓██▒▒██░   ▓██░░▒▓███▀▒▒██▒   ░██▒ ▓█   ▓██▒▒██░   ▓██░
+ ▒ ░░▒░▒ ▒▒   ▓▒█░░ ▒░   ▒ ▒  ░▒   ▒ ░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒ 
+ ▒ ░▒░ ░  ▒   ▒▒ ░░ ░░   ░ ▒░  ░   ░ ░  ░      ░  ▒   ▒▒ ░░ ░░   ░ ▒░
+ ░  ░░ ░  ░   ▒      ░   ░ ░ ░ ░   ░ ░      ░     ░   ▒      ░   ░ ░ 
+ ░  ░  ░      ░  ░         ░       ░        ░         ░  ░         ░ 
+                                                                     
+
+");
+            
             Console.WriteLine();
 
             Console.WriteLine("Wähle eine Aktion aus: ");
@@ -80,7 +93,7 @@ class Program
        
     static void GameLoop(string word)
     {
-        int lives = 5;
+        int lives = 10;
         string hiddenWord = "";
 
         for(int i= 0; i < word.Length; i++)
